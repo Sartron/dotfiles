@@ -1,0 +1,4 @@
+Host *
+    UserKnownHostsFile  ~/winhome/.ssh/known_hosts ~/winhome/.ssh/known_hosts2
+
+Include ~/winhome/.ssh/config

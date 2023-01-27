@@ -1,0 +1,20 @@
+{{ if ne .chezmoi.os "linux" }}
+.bash_logout
+.bash_profile
+.bashrc
+.bashrc.d
+
+{{ if ne "{{ .chezmoi.kernel.osrelease | trunc -4 | lower }}" "wsl2" }}
+.bashrc.d/01-relay-gpg.sh
+.bashrc.d/01-relay-ssh.sh
+bin/music-to-plex
+.bin/music-to-plex.sh
+.bin/setup-wsl-relay.sh
+bin/sync-path-symlinks
+.bin/sync-path-symlinks.sh
+.chezmoi/wsl-relay.tar
+.config/music-to-plex
+.config/sync-path-symlinks
+.ssh/config
+{{ end }}
+{{ end }}
